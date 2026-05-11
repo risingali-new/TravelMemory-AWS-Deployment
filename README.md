@@ -39,53 +39,23 @@ User Browser (HTTPS)
 │   MongoDB Atlas     │  M0 Free Tier · Cloud DB
 └─────────────────────┘
 ```
----
 ☁️ Infrastructure Details
-EC2 Instances
 
 EC2 Instances
-Instance	Public IP	Type	Zone	Status
-TravelMemory-Server	51.21.127.223	t3.micro	eu-north-1a	✅ Running
-TravelMemory-Server-2	51.20.78.237	t3.micro	eu-north-1a	✅ Running
-TravelMemory-Server-3	16.171.114.47	t3.micro	eu-north-1a	✅ Running
 <img width="3201" height="297" alt="image" src="https://github.com/user-attachments/assets/8ed8c741-19fc-4c99-8e97-f1d043f26a9b" />
 
-
 Load Balancer
-Property	Value
-Name	TravelMemory-ALB
-Type	Application Load Balancer
-Scheme	Internet-facing
-Listener	HTTP:80
-Target Group	TravelMemory-TG
-Target Health	3/3 Healthy ✅
+<img width="3187" height="434" alt="image" src="https://github.com/user-attachments/assets/a8030576-7c0c-49c4-9d4b-962a9815c5c0" />
+
 DNS & SSL
-Property	Value
-Domain Registrar	GoDaddy
-DNS Provider	Cloudflare (Free)
-Nameservers	maeve.ns.cloudflare.com / ruben.ns.cloudflare.com
-SSL Mode	Flexible
-A Record	mytravelmemory.in → Proxied
-CNAME	www → ALB DNS → Proxied
----
+<img width="3182" height="433" alt="image" src="https://github.com/user-attachments/assets/325d8964-428f-4cd1-9af8-3e82268b3c94" />
+
 🛠️ Tech Stack
-Layer	Technology	Details
-Frontend	React.js	Production build served by Nginx
-Backend	Node.js + Express	Port 3001 · Managed by PM2
-Database	MongoDB Atlas	M0 Free Tier
-Web Server	Nginx	Reverse proxy + static files
-Process Manager	PM2	Auto-restart + boot startup
-Cloud	AWS EC2	t3.micro · Ubuntu 22.04 LTS
-Load Balancer	AWS ALB	Application LB · HTTP:80
-DNS / CDN	Cloudflare	Free plan · Flexible SSL
----
+<img width="3176" height="550" alt="image" src="https://github.com/user-attachments/assets/94b97bba-abc0-49ec-a223-1655de2e0323" />
+
 📋 Deployment Phases
-Phase	Title	Status
-Phase 1	EC2 Launch & Server Configuration	✅ Complete
-Phase 2	Backend Deployment (Node.js + MongoDB)	✅ Complete
-Phase 3	Frontend Deployment (React + Nginx)	✅ Complete
-Phase 4	Load Balancer Setup (AWS ALB)	✅ Complete
-Phase 5	Custom Domain via Cloudflare	✅ Complete
+<img width="3183" height="371" alt="image" src="https://github.com/user-attachments/assets/a30ec332-d6f6-47ec-a272-54baf44d6d1a" />
+
 ---
 ⚙️ Nginx Configuration
 Each EC2 instance runs this Nginx config:
@@ -112,12 +82,8 @@ server {
 ```
 ---
 🔒 Security Group Ports
-Port	Protocol	Purpose
-22	TCP	SSH access
-80	TCP	HTTP (Nginx)
-443	TCP	HTTPS
-3001	TCP	Node.js Backend API
----
+<img width="3213" height="316" alt="image" src="https://github.com/user-attachments/assets/478914a3-d323-48f0-81c7-0f5ea1640b50" />
+
 🚀 Quick Setup (Per EC2 Instance)
 ```bash
 # 1. Install dependencies
