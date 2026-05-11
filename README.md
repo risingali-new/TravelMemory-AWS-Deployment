@@ -42,10 +42,15 @@ User Browser (HTTPS)
 ---
 ☁️ Infrastructure Details
 EC2 Instances
+
+EC2 Instances
 Instance	Public IP	Type	Zone	Status
 TravelMemory-Server	51.21.127.223	t3.micro	eu-north-1a	✅ Running
 TravelMemory-Server-2	51.20.78.237	t3.micro	eu-north-1a	✅ Running
 TravelMemory-Server-3	16.171.114.47	t3.micro	eu-north-1a	✅ Running
+<img width="3201" height="297" alt="image" src="https://github.com/user-attachments/assets/8ed8c741-19fc-4c99-8e97-f1d043f26a9b" />
+
+
 Load Balancer
 Property	Value
 Name	TravelMemory-ALB
